@@ -16,7 +16,7 @@ class GamesController < ApplicationController
   end
 
   def letter_in_grid
-    @answer.chars.sort.all? { |letter| @grid.include?(letter) }
+    @answer.upcase.chars.sort.all? { |letter| @grid.include?(letter) }
   end
 
   def score
